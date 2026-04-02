@@ -1,0 +1,12 @@
+package com.example.application.Repository;
+
+import com.example.application.Model.Seller;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.Optional;
+
+public interface SellerRepository extends JpaRepository<Seller, Long> {
+
+    Optional<Seller> findByEmail(String email);
+
+}
