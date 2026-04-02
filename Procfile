@@ -1,1 +1,1 @@
-web: java -jar target/applicationrender-0.0.1-SNAPSHOT.jar
+web: java -jar target/application-0.0.1-SNAPSHOT.jar
