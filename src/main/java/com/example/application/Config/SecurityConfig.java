@@ -22,10 +22,10 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable())
                 .cors(cors -> cors.configurationSource(corsConfigurationSource()))
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/**").permitAll()
-                        .requestMatchers("/manifest.json", "/static/**", "/favicon.ico").permitAll()
-                        .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
-                        .anyRequest().authenticated());
+                        .requestMatchers("/api/auth/signup", "/api/auth/login", "/manifest.json", "/favicon.ico", "/static/**").permitAll()
+                        .requestMatchers("/api/auth/me", "/api/**").authenticated()
+                        .anyRequest().permitAll()
+                        );
         return http.build();
     }
 
