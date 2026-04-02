@@ -33,7 +33,7 @@ public class SecurityConfig {
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
         configuration.setAllowedOrigins(List.of(
-                "https://java-recycling-marketplac-git-2d253f-sailajas-projects-c6560025.vercel.app",
+                "java-recycling-marketplace-applicat.vercel.app",
                 "http://localhost:3000",
                 "http://localhost:5173"));
         configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
